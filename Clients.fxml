@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.gestclient">
+   <children>
+      <Label prefHeight="40.0" prefWidth="650.0" text="                                                                                   GESTION CLIENTS" />
+      <VBox layoutX="-7.0" layoutY="53.0" prefHeight="490.0" prefWidth="268.0" AnchorPane.topAnchor="53.0">
+         <children>
+            <HBox fx:id="code" prefHeight="80.0" prefWidth="150.0">
+               <children>
+                  <Label prefHeight="150.0" prefWidth="100.0" text="      CODE" />
+                  <TextField prefHeight="25.0" prefWidth="200.0">
+                     <HBox.margin>
+                        <Insets top="18.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="150.0">
+               <children>
+                  <Label prefHeight="150.0" prefWidth="100.0" text="   NOM CLIENT" />
+                  <TextField fx:id="nomCl" prefHeight="25.0" prefWidth="200.0">
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="90.0" prefHeight="80.0" prefWidth="150.0">
+               <children>
+                  <Label prefHeight="150.0" prefWidth="100.0" text=" PRENOM CLIENT" />
+                  <TextField fx:id="prenomCl" prefHeight="25.0" prefWidth="200.0">
+                     <HBox.margin>
+                        <Insets left="5.0" top="20.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="170.0" prefHeight="80.0" prefWidth="150.0">
+               <children>
+                  <Label prefHeight="150.0" prefWidth="100.0" text="   ADRESSE" />
+                  <TextField fx:id="addCl" prefHeight="25.0" prefWidth="200.0">
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="250.0" prefHeight="80.0" prefWidth="150.0">
+               <children>
+                  <Label prefHeight="150.0" prefWidth="100.0" text="   CONTACT" />
+                  <TextField fx:id="contactCl" prefHeight="25.0" prefWidth="200.0">
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="modifierCl" onAction="#modifierCl" text="MODIFIER">
+                     <HBox.margin>
+                        <Insets left="40.0" top="30.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="ajoutercl" onAction="#ajoutercl" text="AJOUTER">
+                     <HBox.margin>
+                        <Insets left="50.0" top="30.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button fx:id="rechercherClbtn" layoutX="300.0" layoutY="53.0" onAction="#rechercherCl" text="RECHERCHER" />
+      <TextField fx:id="rechercherCl" layoutX="404.0" layoutY="40.0" prefHeight="25.0" prefWidth="185.0" />
+      <VBox layoutX="300.0" layoutY="98.0" prefHeight="490.0" prefWidth="592.0" AnchorPane.bottomAnchor="-21.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="98.0">
+         <children>
+            <TableView fx:id="tabClient" editable="true" prefHeight="200.0" prefWidth="512.0" tableMenuButtonVisible="true">
+              <columns>
+                <TableColumn fx:id="TcdCl" prefWidth="70.0" text="CODE" />
+                <TableColumn fx:id="TnomCl" prefWidth="100.0" text="NOM CLIENT" />
+                  <TableColumn fx:id="TpreCl" prefWidth="100.0" text="PRENOM CLIENT" />
+                  <TableColumn fx:id="TaddCl" prefWidth="100.0" text="ADRESSE CLIENT" />
+                  <TableColumn fx:id="TconCl" prefWidth="118.0" text="CONTACT CLIENT" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
