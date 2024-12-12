@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.GuideUtilisationController">
+    <children>
+        <VBox spacing="10" prefWidth="600" prefHeight="800" layoutX="20" layoutY="20">
+            <Label text="Guide d'Utilisation" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+            <TitledPane text="1. Général">
+                <content>
+                    <Label wrapText="true" text="Bienvenue dans l'application de gestion des réservations de véhicules. Cette application est conçue pour faciliter la gestion des véhicules, des utilisateurs et des réservations dans un parc automobile. Ce guide vous aidera à comprendre les principales fonctionnalités de l'application."/>
+                </content>
+            </TitledPane>
+            <TitledPane text="2. Connexion">
+                <content>
+                    <VBox spacing="5">
+                        <Label wrapText="true" text="1. Lancez l'application."/>
+                        <Label wrapText="true" text="2. Entrez vos identifiants (nom d'utilisateur et mot de passe)."/>
+                        <Label wrapText="true" text="3. Cliquez sur Connexion."/>
+                        <Label wrapText="true" text="4. Si vous n'avez pas de compte, en créer un."/>
+                    </VBox>
+                </content>
+            </TitledPane>
+            <TitledPane text="3. Menu Principal">
+                <content>
+                    <VBox spacing="5">
+                        <Label wrapText="true" text="L'application est divisée en plusieurs sections accessibles via un menu principal :"/>
+                        <Label wrapText="true" text="• Clients : Gérer les informations des clients."/>
+                        <Label wrapText="true" text="• Véhicules : Ajouter, modifier ou supprimer des véhicules."/>
+                        <Label wrapText="true" text="• Réservations : Planifier et suivre les réservations de véhicules."/>
+                        <Label wrapText="true" text="• Contrats : Gérer les contrats liés aux réservations."/>
+                        <Label wrapText="true" text="• Factures : Créer et consulter les factures."/>
+                        <Label wrapText="true" text="• Gestionnaires : Administrer les comptes des gestionnaires et utilisateurs."/>
+                    </VBox>
+                </content>
+            </TitledPane>
+            <TitledPane text="4. Fonctionnalités Principales">
+                <content>
+                    <VBox spacing="5">
+                        <TitledPane text="4.1. Gestion des Clients">
+                            <content>
+                                <VBox spacing="5">
+                                    <Label wrapText="true" text="1. Cliquez sur Clients dans le menu."/>
+                                    <Label wrapText="true" text="2. Utilisez les options suivantes :"/>
+                                    <Label wrapText="true" text="   • Ajouter un client : Remplissez les informations et cliquez sur Enregistrer."/>
+                                    <Label wrapText="true" text="   • Modifier un client : Sélectionnez un client dans la liste, modifiez les informations et cliquez sur Enregistrer."/>
+                                    <Label wrapText="true" text="   • Supprimer un client : Sélectionnez un client et cliquez sur Supprimer."/>
+                                </VBox>
+                            </content>
+                        </TitledPane>
+                        <TitledPane text="4.2. Gestion des Véhicules">
+                            <content>
+                                <VBox spacing="5">
+                                    <Label wrapText="true" text="1. Cliquez sur Véhicules."/>
+                                    <Label wrapText="true" text="2. Utilisez les fonctionnalités suivantes :"/>
+                                    <Label wrapText="true" text="   • Ajouter un véhicule : Renseignez les détails (modèle, immatriculation, état) et cliquez sur Ajouter."/>
+                                    <Label wrapText="true" text="   • Modifier un véhicule : Sélectionnez un véhicule et mettez à jour ses informations."/>
+                                    <Label wrapText="true" text="   • Supprimer un véhicule : Supprimez un véhicule de la liste."/>
+                                </VBox>
+                            </content>
+                        </TitledPane>
+                        <TitledPane text="4.3. Réservations">
+                            <content>
+                                <VBox spacing="5">
+                                    <Label wrapText="true" text="1. Accédez à Réservations."/>
+                                    <Label wrapText="true" text="2. Pour effectuer une réservation :"/>
+                                    <Label wrapText="true" text="   • Sélectionnez un client."/>
+                                    <Label wrapText="true" text="   • Choisissez un véhicule disponible."/>
+                                    <Label wrapText="true" text="   • Entrez les dates de début et de fin."/>
+                                    <Label wrapText="true" text="   • Validez la réservation."/>
+                                    <Label wrapText="true" text="3. Suivez les réservations existantes dans la liste."/>
+                                </VBox>
+                            </content>
+                        </TitledPane>
+                        <TitledPane text="4.4. Contrats">
+                            <content>
+                                <VBox spacing="5">
+                                    <Label wrapText="true" text="1. Cliquez sur Contrats."/>
+                                    <Label wrapText="true" text="2. Consultez les contrats."/>
+                                    <Label wrapText="true" text="3. Créez un nouveau contrat en associant un client et une réservation."/>
+                                </VBox>
+                            </content>
+                        </TitledPane>
+                        <TitledPane text="4.5. Factures">
+                            <content>
+                                <VBox spacing="5">
+                                    <Label wrapText="true" text="1. Accédez à Factures."/>
+                                    <Label wrapText="true" text="2. Sélectionnez une réservation pour générer une facture."/>
+                                </VBox>
+                            </content>
+                        </TitledPane>
+                        <TitledPane text="4.6. Gestion des Utilisateurs">
+                            <content>
+                                <VBox spacing="5">
+                                    <Label wrapText="true" text="1. Cliquez sur Gestionnaires."/>
+                                    <Label wrapText="true" text="2. Ajoutez, modifiez ou supprimez des comptes de gestionnaires."/>
+                                </VBox>
+                            </content>
+                        </TitledPane>
+                    </VBox>
+                </content>
+            </TitledPane>
+        </VBox>
+    </children>
+</AnchorPane>
