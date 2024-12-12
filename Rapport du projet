@@ -1,0 +1,750 @@
+
+
+	
+
+
+
+
+
+
+   
+
+
+RESUME
+
+L’objectif principal de ce projet est d’automatiser et d’optimiser le processus de réservation des véhicules dans un parc automobile, en remplaçant les méthodes manuelles très souvent inefficace par une solution numérique mieux adaptée. Dans ce rapport, nous présentons point par point les étapes qui ont permis de mener a bien la réalisation de ce projet. Afin de d’atteindre cet objectif nous  avons fait appel aux différentes technologies dont, Eclipse, une  IDE java (environnement de développement intégré) qui nous permettra de coder notre application , Java FX qui est une bibliothèque java qui permet d’inclure des interfaces graphiques au projet , Scène Builder qui est l’application qui permet créer des interfaces graphiques, Apache http comme serveur et MySQL comme gestionnaire de notre base de données .
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+ABSTRACT
+
+The main objective of this project is to automate and optimize the vehicle reservation process in a fleet, replacing the often inefficient manual methods with a more suitable digital solution. In this report, we present point by point the steps that have allowed us to successfully complete this project. In order to achieve this objective, we have used different technologies including Eclipse, a Java IDE (integrated development environment) that will allow us to code our application, Java FX which is a Java library that allows you to include graphical interfaces in the project, Scene Builder which is the application that allows you to create graphical interfaces, Apache http as a server and MySQL as the manager of our database.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LISTE DES TABLEAUX
+Tableau 1 : ressources humaines	15
+Tableau 2 : ressources matérielles	15
+Tableau 3 : ressources logicielles	15
+Tableau 4 : cout du projet	16
+Tableau 5 : répartition du temps	16
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LISTE DES FIGURES 
+Figure 1 : diagramme de classe	19
+Figure 2 : diagramme de sequence	20
+Figure 3 : diagramme de cas d’utilisation	21
+Figure 4 : diagramme de pieuvre	22
+Figure 5 : diagramme de pieuvre	23
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                  INTRODUCTION GENERALE
+
+La gestion efficace des ressources, notamment les véhicules dans un parc automobile, est une problématique essentielle pour de nombreuses organisations. Les méthodes traditionnelles basées sur des processus manuels ou des feuilles de calcul sont souvent sujettes à des erreurs, des pertes de données et une faible visibilité sur l’état des réservations. Dans ce contexte, l'adoption de solutions numériques s'impose comme une nécessité pour améliorer la performance et la fiabilité des opérations.
+Ce rapport porte sur la conception et le développement d'une application dédiée à la gestion des réservations de véhicules. Le système proposé vise à automatiser les processus de réservation, de suivi, et de gestion des conflits, tout en offrant une interface utilisateur intuitive et des performances robustes.
+Pour répondre à ces objectifs, l'application est développée en utilisant Java comme langage principal, avec JavaFX pour une interface graphique moderne et interactive. Les données sont centralisées et gérées à l'aide de MySQL, une base de données relationnelle fiable et performante, tandis qu'Apache est utilisé pour héberger et gérer les services associés. L'ensemble du projet est conçu et développé dans l'environnement Eclipse IDE, permettant une gestion fluide du code et une intégration des outils.Ce rapport explore les besoins fonctionnels et techniques du projet, détaille la conception de l'application, et discute des résultats obtenus. L'objectif final est de fournir une solution adaptable et évolutive pour les parcs automobiles, en mettant l'accent sur l'efficacité, la simplicité et la satisfaction des utilisateurs.
+
+
+
+
+
+
+
+
+
+
+CHAPITRE1 : ETUDES THEORIQUES SUR LE THEME 
+
+
+PROBLEMATIQUE
+
+
+Dans un contexte où les parcs automobiles jouent un rôle clé dans la logistique et les opérations de nombreuses organisations, la gestion des réservations des véhicules reste un défi majeur. Les approches traditionnelles, souvent manuelles ou semi-numériques, présentent plusieurs limitations : risques d’erreurs humaines, conflits de réservation, manque de visibilité sur la disponibilité des véhicules, et difficulté à générer des rapports précis. Ces contraintes affectent non seulement l'efficacité des opérations, mais aussi la satisfaction des utilisateurs.
+
+
+SOUTIONS EXISTANTES
+
+Logiciels de gestion des flottes (Fleet Management Software)
+
+Les logiciels de gestion des flottes sont des outils complets conçus pour les entreprises qui gèrent un parc de véhicules. Ces solutions offrent des fonctionnalités comme le suivi des véhicules, la gestion des réservations, l'optimisation des itinéraires et la maintenance prédictive. Elles sont idéales pour les grandes entreprises avec des flottes importantes.
+
+Avantages :
+
+Fonctionnalités complètes : Ces logiciels regroupent toutes les fonctionnalités nécessaires pour gérer les réservations, les trajets, l’état des véhicules, et même leur maintenance.
+Suivi en temps réel : Grâce à l'intégration GPS, les administrateurs peuvent suivre la localisation des véhicules à tout moment.
+Rapports automatisés : Génération de rapports pour analyser l'utilisation des véhicules et optimiser les coûts
+Fiabilité : Développés par des entreprises spécialisées, ces outils bénéficient d’un support technique fiable.
+
+Inconvénients :
+
+Coût élevé : Ces solutions nécessitent un investissement initial et des frais de licence, souvent élevés
+Complexité : Les nombreuses fonctionnalités peuvent rendre l’outil difficile à utiliser sans formation préalable.
+Manque de personnalisation : Les fonctionnalités standards peuvent ne pas répondre parfaitement aux besoins spécifiques d'une entreprise.
+
+
+Solutions logicielles personnalisées
+
+Les solutions personnalisées sont conçues sur mesure pour répondre aux besoins spécifiques d’une entreprise. Elles peuvent être développées avec des technologies comme Java, JavaFX, et des bases de données comme MySQL, en utilisant des outils comme Eclipse ou Scene Builder.
+
+Avantages :
+
+Personnalisation totale : Permet d'adapter l’application aux processus spécifiques de l’entreprise.
+Évolutivité : Possibilité d’ajouter de nouvelles fonctionnalités à mesure que les besoins évoluent.
+Contrôle complet : L’entreprise conserve la gestion totale de ses données et de la solution, ce qui garantit une sécurité optimale.
+
+
+
+
+
+Inconvénients :
+
+Temps de développement long : La conception et le déploiement d'une application personnalisée nécessitent du temps
+Coût initial élevé : Bien qu'économique à long terme, les coûts de développement peuvent être élevés
+Maintenance technique : L’entreprise doit disposer d’une équipe technique capable de gérer les bugs et les mises à jour.
+
+Solutions cloud (SaaS - Software as a Service)
+
+Les solutions SaaS sont des plateformes hébergées sur le cloud, accessibles via un navigateur ou une application. Elles ne nécessitent pas d’installation locale, ce qui les rend idéales pour les petites et moyennes entreprises qui recherchent une solution facile à déployer.
+
+Avantages :
+
+Accessibilité : Les utilisateurs peuvent accéder à la plateforme depuis n'importe quel appareil connecté à Internet.
+Mises à jour automatiques : Les mises à jour et les améliorations sont gérées par le fournisseur.
+Faible coût initial : Le modèle par abonnement réduit les coûts initiaux d’installation
+Évolutivité : Ces solutions s’adaptent facilement à la croissance de l’entreprise.
+
+Inconvénients :
+
+Dépendance à Internet : Une connexion stable est nécessaire pour utiliser ces solutions
+Dépendance au fournisseur : Les fonctionnalités et les données sont entièrement gérées par le prestataire.
+Coût récurrent : Les abonnements mensuels ou annuels peuvent représenter un coût important sur le long terme.
+
+Applications mobiles
+
+Ces solutions sont des applications spécialement développées pour les smartphones et tablettes, permettant aux utilisateurs de gérer les réservations de véhicules où qu’ils soient. Elles sont particulièrement adaptées aux utilisateurs en déplacement.
+
+Avantages :
+
+Accessibilité pratique : Les utilisateurs peuvent gérer les réservations depuis leur téléphone, n'importe où et n'importe quand.
+Interface moderne : Les applications mobiles offrent généralement des interfaces conviviales et intuitives.
+Notifications en temps réel : Les alertes pour les nouvelles réservations, les modifications ou les annulations sont instantanées.
+
+Inconvénients :
+
+Fonctionnalités limitées : Les applications mobiles ne peuvent pas toujours proposer toutes les fonctionnalités disponibles dans les solutions complètes pour ordinateur.
+
+Compatibilité : Certains systèmes d'exploitation (Android ou iOS) peuvent ne pas être pris en charge.
+Sécurité : Les données sensibles pourraient être compromises si l’application n’est pas correctement sécurisée.
+
+
+Systèmes de réservation spécifiques
+
+Ces solutions se concentrent uniquement sur la gestion des réservations de véhicules. Elles sont idéales pour les entreprises qui souhaitent une gestion simple des plannings sans avoir besoin des fonctionnalités supplémentaires liées à la gestion de flotte.
+
+Avantages :
+
+Spécialisation : Ces outils se concentrent uniquement sur les besoins de réservation, ce qui simplifie leur utilisation.
+Facilité d’utilisation : Généralement simples à configurer et à maîtriser.
+Rapports dédiés : Permet de suivre efficacement les statistiques liées aux réservations (nombre, durée, utilisateurs, etc.).
+
+
+Inconvénients :
+
+Fonctionnalités limitées : Ces systèmes ne gèrent pas d'autres aspects comme le suivi des véhicules ou la maintenance.
+Manque d’intégration : Peut nécessiter des outils supplémentaires pour la gestion complète du parc automobile.
+Dépendance au fournisseur : Les mises à jour et les modifications dépendent du prestataire.
+
+
+
+
+
+
+
+
+
+
+
+CHAPITRE 2 : PRESENTATION DU PROJET
+ 
+Suite à ce premier chapitre qui portait essentiellement sur quelques projets qui ont été entrepris en vue de facilité la gestion des patients, voici venue le second chapitre qui va permettre de présenter de façon plus détaillée notre projet, ses spécificités, l’estimation des coûts actuels ainsi que les principales cibles visées.
+
+CADRE DU PROJET     
+
+La gestion efficace des réservations de véhicules dans un parc automobile est un défi majeur pour les entreprises et organisations qui utilisent ces ressources pour leurs activités quotidiennes. Ce projet s'inscrit dans un contexte où l'optimisation des processus de gestion et l'utilisation de technologies modernes sont devenues incontournables pour améliorer la productivité et réduire les erreurs liées aux systèmes manuels.
+Ce projet est conçu pour répondre aux besoins des organisations ayant un parc automobile destiné à diverses missions, telles que le transport du personnel, la livraison de biens ou la gestion des déplacements officiels. L’objectif est de fournir une solution numérique qui permettra :
+
+
+OBJECTIFS DU PROJET 
+
+Objectif global :
+Le principal objectif de ce projet est de concevoir et développer une application numérique de gestion des réservations des véhicules permettant d’optimiser l’utilisation d’un parc automobile. Cette solution vise à réduire les inefficacités liées aux systèmes manuels, à prévenir les conflits d’attribution et à centraliser les données pour une gestion plus transparente et efficace.
+Objectifs spécifiques :
+1. Automatiser les processus de réservation :
+Remplacer les systèmes manuels ou semi-automatisés par une solution numérique ,intégrée. 
+Permettre aux utilisateurs de réserver un véhicule via une interface conviviale et accessible.
+
+Assurer une gestion centralisée des données 
+Centraliser les informations relatives aux véhicules (état, disponibilité, maintenance).
+Gérer les données des utilisateurs (identité, historique des réservations) et des trajets.
+3. Optimiser l’utilisation des ressources disponibles :
+Éviter la sous-utilisation ou la surutilisation de certains véhicules.
+Assurer un suivi rigoureux des réservations pour prévenir les conflits entre utilisateurs.
+4. Faciliter le suivi et la maintenance des véhicules 
+Intégrer des fonctionnalités permettant de suivre l’état des véhicules et planifier leur maintenance.
+Garantir la disponibilité des véhicules en bon état pour les réservations.
+5. Améliorer la transparence et la traçabilité :
+Suivre en temps réel les informations relatives aux trajets effectués et aux utilisateurs.
+Générer des rapports sur l’utilisation du parc automobile pour une meilleure prise de décision.
+6. Réduire les coûts opérationnels :
+Minimiser les dépenses inutiles liées à la gestion inefficace du parc
+Maximiser la durée de vie des véhicules grâce à un suivi régulier.
+
+PRESENTATION DES DIFFICULTES
+
+Lors de la réalisation d’un projet de conception d’une application pour la gestion des réservations de véhicules, plusieurs difficultés potentielles peuvent survenir. Ces défis peuvent être liés à des aspects techniques, organisationnels ou humains. Voici une analyse des principales difficultés :
+L’intégration entre Java, JavaFX, MySQL, et un serveur web comme Apache Tomcat peut nécessiter une expertise avancée.
+Les problèmes de compatibilité entre différentes versions des outils et bibliothèques peuvent ralentir le développement.
+Conception de l'interface utilisateur 
+Créer une interface intuitive et ergonomique peut être un défi, surtout pour s'assurer qu'elle répond aux besoins des utilisateurs non techniques
+Garantir la compatibilité sur différents écrans et systèmes d’exploitation.
+Conception d’un modèle de données efficace pour stocker les informations sur les véhicules, les utilisateurs, les trajets, etc.
+Risque de surcharges ou de ralentissements si le volume de données devient important.
+Contraintes budgétaires qui limitent l’acquisition d’outils ou de technologies nécessaires.
+Gestion du temps 
+Une communication insuffisante peut entraîner des malentendus ou des erreurs dans le développement.
+S’assurer que l’application peut gérer une augmentation du nombre d’utilisateurs ou de données à l’avenir.
+Concevoir un système flexible pour intégrer facilement de nouvelles fonctionnalités si nécessaire
+Décomposer le projet en étapes bien définies avec des délais réalistes.
+Utilisation de bonnes pratiques 
+Adopter des méthodologies de développement agile pour s’adapter aux changements et assurer un suivi continu.
+
+CIBLES
+
+Pour un devoir portant sur une application de gestion (par exemple, un système de réservation de véhicules), il est essentiel de définir la cible principale et la cible secondaire. Ces cibles correspondent aux utilisateurs que le système vise à servir directement ou indirectement. Voici une réponse générique que vous pouvez adapter à votre contexte spécifique :
+
+1. Cible principale :
+La cible principale comprend les utilisateurs directs de l'application, ceux qui l'utiliseront régulièrement pour accomplir leurs tâches. 
+Les administrateurs : responsables de la gestion globale (ajout de véhicules, gestion des utilisateurs, gestion des permissions).
+Les gestionnaires de parc : responsables de la planification, des réservations, et du suivi des véhicules.
+2. Cible secondaire :
+La cible secondaire correspond aux utilisateurs ou parties prenantes indirectes, qui bénéficient du système sans l'utiliser directement. Par exemple :
+Les clients : qui profitent d'un service mieux organisé grâce à une gestion optimisée des véhicules.
+La direction de l'entreprise : qui utilise les rapports et analyses générés par le système pour prendre des décisions stratégiques.
+
+
+PRESENTATION DU CAHIER DE CHARGE 
+
+1.1. Contexte
+Les entreprises possédant un parc automobile font face à des défis liés à la gestion des véhicules, des utilisateurs et des réservations. Actuellement, ces processus sont souvent réalisés manuellement ou à l'aide de solutions non adaptées. Une application logicielle dédiée est nécessaire pour automatiser ces tâches, améliorer l'efficacité et réduire les erreurs.
+
+SPECIFICATIONS FONCTIONNELS DE L’APPLICATION 
+
+Comme fonctionnalités a  notre application nous avons 
+GESTION DES CLIENTS 
+Qui consiste a 
+Ajouter un client
+Modifier un client
+Supprimer un client
+GESTION DES VEHICULES
+Ajouter un véhicule avec ses champs , immatriculation , marque, modèle, état, disponibilité
+Modifier les informations lies a un client
+Supprimer un client
+GESTION DES RESERVATIONS 
+Créer une nouvelle réservation 
+Modifier une réservation
+Annuler une réservation 
+GESTION DES CONTRATS ET FACTURE
+Créer une facture, contenant les infos du client
+Créer un contrat 
+  
+Base de données
+Entités principales :
+Client : ID, nom, prénom, téléphone, email, adresse.
+Véhicule : ID, immatriculation, modèle, état, disponibilité.
+Réservation : ID, client, véhicule, date début, date fin.
+Contrat : ID, réservation, conditions générales.
+Facture : ID, réservation, montant total.
+
+Sécurité
+Authentification utilisateur avec rôles (administrateur, gestionnaire).
+Gestion des permissions pour restreindre certaines actions.
+
+SPECIFICATIONS TECHNIQUES DE L’APPLICATION
+
+Les besoins techniques sont indispensables et permettent de l'amélioration de la qualité logicielle de notre système. Ils agissent comme des contraintes sur les solutions, mais leur prise en considération fait éviter plusieurs incohérences dans le système. Ils répondent exigences suivantes :              
+
+ L'authentification : le système doit permettre à l'utilisateur de saisir son login et son mot de passe pour accéder au système. Cette opération assure la sécurité de système et limite le nom des utilisateurs,
+
+La rapidité du traitement : en effet, vu le nombre important des transactions quotidiennes.
+
+il est impérativement nécessaire que la durée d'exécution des traitements s'approche le plus possible du temps réel
+
+La performance: un logiciel doit être avant tout performant c'est à dire à travers ses fonctionnalités, répond à toutes les exigences des utilisateurs d'une manière performante.
+
+METHODES UTILISEES
+
+METHODES
+Un projet ne peut être réussi que par une bonne analyse au préalable. Cette phase dédiée à l’analyse et la conception de notre application de gestion de locations de véhicules, nous avions utilisé le langage UML (Unified Modeling Langage) qui est un langage de modélisation permettant de mieux structurer le projet. Nous procéderons dans un premier temps une analyse non fonctionnelle où nous allons présenter les diagrammes de bêtes à cornes et le diagramme de pieuvre. Ensuite nous allons établir une analyse non fonctionnelle en établissant les diagrammes des cas d’utilisation, de classe et de séquence.
+
+
+JUSTIFICATION
+Nous avons choisi d’utiliser le langage UML (Unified Modeling Language) pour de nombreuses raisons :
+Comporte de nombreux diagrammes qui explicitent un projet
+UML est international
+Il est plus orienté vers la conception
+
+
+LANGAGES UTILISES
+Pour réaliser ce projet, nous avons utilisé le language de programmation Java qui avait été indiqué comme language de programmation à utiliser
+certes en raison de sa portabilité, de sa simplicité, le fait qu’il ait une orientation Web Native mais aussi en raison du fait qu’il a été étudié lors de la formation
+
+
+TECHNOLOGIES UTLISEES
+
+ECLIPSE IDE:  Pour ce projet, nous avons utilisé NetBeans qui est l’un des multiples IDE du langage Java. Le choix de son usage est dû au fait qu’il permet la création des interfaces sans 
+java FX: qui est une bibliothèque java qui nous permettra de réaliser nos interfaces graphiques
+SCENE BUILDER: qui est l’application qui nous permettra de dessiner nos interfaces et de générer le fichier fxml ce ces interface .  
+XAMPP: pour gérer les bases de données
+APACHE:  qui sera notre serveur 
+MYSQL: Nous avons opter pour le choix de MYSQL car grâce au fichier Mysql-connector, il est plus facile de le lier à des IDEs. Par ailleurs, il est facile à utiliser et propose des exemples de bases de données aux utilisateurs.
+MICROSOFT WORD: Nous l’avons utilisé lors de la rédaction du rapport
+
+
+
+
+
+
+
+
+
+
+
+GESTION DU PROJET 
+
+ORGANISATION DU PROJET
+Tableau1 : Ressources humaines
+Auteur
+Responsabilité
+BENGONO BEKOLO Bruno
+HANANE MAHAMAT
+TIENTCHEU Paola
+NOTUE Simo
+Conception des diagrammes
+Conception du code
+Rédaction du rapport
+Recherche lies aux thèmes
+
+
+Tableau 1 : ressources humaines 
+
+
+Tableau de ressources materielles
+Equipements
+Caractéristiques
+Quantité
+Fonction
+Laptop
+Système d’exploitation :Windows 10
+01
+Est utilisé pour la rédaction du rapport du projet ainsi que la codification.
+Modem
+15Gb
+01
+Permet la connexion à internet
+
+
+Tableau 2 : ressources matérielles
+	
+Tableau de ressources logicielles
+  Pour mener à bien ce projet, nous avons utilisé les logiciels suivants :
+Désignation
+Type
+Taille
+Version
+Fabricant
+Prix
+Scène Builder
+Interface
+
+
+2022
+
+
+gratuit
+Windows 10
+Système d’exploitation
+6Gb
+2021
+Microsoft
+Gratuit
+ECLIPSE
+ IDE
+500Mb
+17
+NetBeansFondation
+Gratuit
+MS office
+7Gb
+1Gb
+2016
+Microsoft
+Gratuit
+
+
+
+
+Tableau 3 : ressources logicielles
+
+
+
+COUT DU PROJET
+Composants
+Prix (FCFA)
+Laptop (01)
+500000
+Modem (01)
+15000
+Clé USB 16Gb (01)
+8000
+Forfait internet
+10000
+Rapports
+8000
+Net à payer
+541000
+
+
+Tableau 4 : cout du projet
+
+
+
+
+
+
+
+
+Répartition du temps
+
+Etapes
+
+
+Délais
+Définition des besoins
+
+
+3 jours
+Plan de travail
+
+
+2 jours
+Collecte d’informations
+5 jours
+Analyse et conception
+
+
+7 jours
+Implémentation
+
+
+5 jours
+Vérification du programme
+
+
+2 jours
+Saisie du rapport
+
+
+4 jours
+Total
+25 jours
+
+
+Tableau 5 : répartition du temps
+
+
+
+
+
+
+
+
+
+
+CHAPITRE III : ANALYSE ET CONCEPTION DE LA SOLUTION
+
+ANALYSE FONCTIONNELLES
+
+L'analyse fonctionnelle vise à exprimer le besoin en termes de services attendus plutôt qu'en terme de solution. C’est une étape indispensable pour permettre la déclinaison des objectifs en un organigramme des tâches qui répondent aux attentes du des utilisateurs.
+
+PRESENTATION DE LA METHODES DE CONCEPTIONS
+
+UML ( Unified Modeling Language ou «Language de Modélisation Objet Unifié»est un standard défini par l’ OMG(Object Management Group). Il est un language de modélisation graphique à base de pictogrammes. Il est apparut dans le monde du développement logiciel dans le cadre de la conception orienté objet. C’est une méthode qui est née de la fusion des trois méthodes qui ont le plus influencés la modélisation objet au milieu des années 90: OMT, BOOCH, OOSE. UML est un language graphique et textuel permettant de représenter, de communiquer les divers aspects d’un système d’information.UML utilise 14 types de diagrammes divisée en deux groupes: 
+Diagrammes structurels:
+     Classe
+Composants
+Déploiement
+Objets
+Paquetage
+Profil
+Structure composite
+
+Diagrammes comportementaux:
+Cas d’utilisation
+Activité
+État
+Séquence
+Communication
+Présentation des interactions
+Diagramme de temps
+Dans le cadre de notre projet, nous utiliserons le diagramme de classe, le diagramme de sequence, le diagramme de cas d’utilisation et le diagramme d’activité.
+
+DIAGRAMME DE CLASSE
+
+Le diagramme de classe représente la description statique du système à développer en intégrant dans chaque classe la partie dédiée aux données et celle consacrée aux traitements. 
+C’est un diagramme pivot de l’ensemble de modélisation d’un système, cette représentation est concentrée sur le concept de classe et d’associations, les traitements sont matérialisés par des opérations.
+Une classe est une description abstraite d’un ensemble d’objet ayant des propriétés similaires, un comportement commun et des relations communes avec d’autres objets.
+Représentation du diagramme de classe :
+
+
+	Figure 1 : diagramme de classe
+	
+
+
+
+
+
+DIAGRAMME DE SEQUENCE
+
+Le diagramme de séquence décrit la dynamique du système. A moins de modéliser un très petit système, il est difficile de représenter toute la dynamique d’un système sur un seul diagramme. Aussi la dynamique globale sera représentée par un ensemble de diagrammes de séquences, chacun étant généralement lié à une sous fonction du système.
+Le diagramme de séquence décrit les interactions entre un groupe d’objets en montrant, de façon séquentielle, les envois de message qui interviennent entre les objets. Il peut également montrer les flux de données échangées lors des envois de messages.
+
+
+	Figure 2 : diagramme de sequence
+
+
+	
+
+3- DIAGRAMME DE CAS D’UTILISATION
+Il est utilisé pour une représentation du comportement fonctionnel d'un système logiciel. Ils sont utiles pour des présentations auprès de la direction ou des acteurs d'un projet mais pour le développement, les cas d'utilisation sont plus appropriés.
+
+Les cas d’utilisation : ils permettent de décrire l‘interaction entre l’acteur et le système. Dans notre système, nous avons les différents cas suivants :
+Choix du mode d’utilisation
+Connection après authentification
+Ajout des information
+Modification des information
+Consultation des informations
+Attribution des mots de passe
+
+
+
+	Figure 3 : diagramme de cas d’utilisation
+
+
+ANALYSE NON FONCTIONELLES
+
+L’analyse non fonctionnelle est importante car elle permet de fixer les caractéristiques et l’objectif principal de l’application 
+
+Diagramme de  pieuvre
+
+Il permet de faire une représentation schématique de l’analyse externe 
+FC1 : La plate-forme doit offrirez un niveau élevé de sécurité pour protéger les donnés liées au parc automobile 
+FC2 :l’application doit pouvoir gérer l’augmentation de la charge de travail 
+FC3 : L’application doit être disponible à tout moment de manière fiable
+FC4 : L’interface utilisateur doit être intuitive et conviviale 
+FC5 : L’application doit être extensible 
+FC6 : l’application doit avoir des temps de chargement rapides 
+
+
+
+	Figure 4 : diagramme de pieuvre
+	
+
+
+Diagramme de bête a corne 
+
+Il permet de répondre à trois principales questions : 
+Quel est l’objectif principal du système ?
+À qui est-il destiné ?
+Sur quoi s’utilise t-il ?
+
+
+
+	Figure 5 : diagramme de pieuvre
+
+
+
+
+
+
+
+ Architecture utilise 
+L'architecture Modèle/Vue/Contrôleur (MVC) est une façon d'organiser une interface graphique d'un programme. Elle consiste à distinguer trois entités distinctes qui sont, le modèle, la vue et le contrôleur ayant chacun un rôle précis dans l'interface. 
+ 
+L'organisation globale d'une interface graphique est souvent délicate. Bien que la façon MVC d'organiser une interface ne soit pas la solution miracle, elle fournit souvent une première approche qui peut ensuite être adaptée. Elle offre aussi un cadre pour structurer une application. 
+Dans l'architecture MVC, les rôles des trois entités sont les suivants. 
+modèle : données (accès et mise à jour) 
+vue : interface utilisateur (entrées et sorties) 
+contrôleur : gestion des événements et synchronisation 
+Rôle du modèle 
+Le modèle contient les données manipulées par le programme. Il assure la gestion de ces données et garantit leur intégrité. Dans le cas typique d'une base de données, c'est le modèle qui la contient. 
+Le modèle offre des méthodes pour mettre à jour ces données (insertion suppression, changement de valeur). Il offre aussi des méthodes pour récupérer ses données. Dans le cas de données importantes, le modèle peut autoriser plusieurs vues partielles des données. 
+Rôle de la vue 
+La vue fait l'interface avec l'utilisateur. Sa première tâche est d'afficher les données qu'elle a récupérées auprès du modèle. Sa seconde tâche est de recevoir tous les actions de l'utilisateur (clic de souris, sélection d'une entrées, boutons, …). Ses différents événements sont envoyés au contrôleur. 
+La vue peut aussi donner plusieurs vues, partielles ou non, des mêmes données. Par exemple, l'application de conversion de bases a un entier comme unique donnée. Ce même entier est affiché de multiples façons (en texte dans différentes bases, bit par bit avec des boutons à cocher, avec des curseurs). La vue peut aussi offrir la possibilité à l'utilisateur de changer de vue. 
+ 
+ 
+Rôle du contrôleur 
+Le contrôleur est chargé de la synchronisation du modèle et de la vue. Il reçoit tous les événements de l'utilisateur et enclenche les actions à effectuer. Si une action nécessite un changement des données, le contrôleur demande la modification des données au modèle et ensuite avertit la vue que les données ont changé pour que celle-ci se mette à jour. Certains événements de l'utilisateur ne concernent pas les données mais la vue. Dans ce cas, le contrôleur demande à la vue de se modifier. 
+Dans le cas d'une base de données des emplois du temps. Une action de l'utilisateur peut être l'entrée (saisie) d'un nouveau cours. Le contrôleur ajoute ce cours au modèle et demande sa prise en compte par la vue. Une action de l'utilisateur peut aussi être de sélectionner une nouvelle personne pour visualiser tous ses cours. Ceci me modifie pas la base des cours mais nécessite simplement que la vue s'adapte et offre à l'utilisateur une vision des cours de cette personne. 
+Le contrôleur est souvent scindé en plusieurs parties dont chacune reçoit les événements d'une partie des composants. En effet si un même objet reçoit les événements de tous les composants, il lui faut déterminer quelle est l'origine de chaque événement. Ce tri des événements peut s'avérer fastidieuse et peut conduire à un code pas très élégant (un énorme switch). C'est pour éviter ce problème que le contrôleur est réparti en plusieurs objets. 
+Interactions 
+Les différentes interactions entre le modèle, la vue et le contrôleur sont résumées par le schéma de la figure suivante  
+.  
+Figure 12 : Architecture MVC 
+ 
+ 
+ 
+IMPLEMENTATION ET INTERPRETATION DES RESULTATS
+ 
+ 
+ Cette étape marque le but de la réalisation de notre projet car on présentera à ce niveau 
+L’implémentation des différents programmes (application) à développer à partir des choix du matériel et du logiciel. 
+
+CAPTURES DES LIGNES DE CODE
+
+CAPTURE DES SOLUTIONS
+
+
+ 
+ 
+
+
+                            
+                                                               TABLE DES MATIERES
+I.	RESUME	1
+II.	ABSTRACT	2
+III.	LISTE DES TABLEAUX	3
+IV.	LISTE DES FIGURES	4
+INTRODUCTION GENERALE	5
+CHAPITRE1 : ETUDES THEORIQUES SUR LE THEME	6
+1.	PROBLEMATIQUE	6
+2.	SOUTIONS EXISTANTES	6
+CHAPITRE 2 : PRESENTATION DU PROJET	11
+I.	CADRE DU PROJET	11
+II.	OBJECTIFS DU PROJET	11
+III.	PRESENTATION DES DIFFICULTES	12
+IV.	CIBLES	13
+V.	PRESENTATION DU CAHIER DE CHARGE	14
+1.	SPECIFICATIONS FONCTIONNELS DE L’APPLICATION	14
+2.	SPECIFICATIONS TECHNIQUES DE L’APPLICATION	15
+VI.	METHODES UTILISEES	16
+VII.	GESTION DU PROJET	18
+1.	ORGANISATION DU PROJET	18
+CHAPITRE III : ANALYSE ET CONCEPTION DE LA SOLUTION	21
+I.	ANALYSE FONCTIONNELLES	21
+II.	ANALYSE NON FONCTIONELLES	25
+III.	IMPLEMENTATION ET INTERPRETATION DES RESULTATS	29
+CONCLUSION GENERALE	31
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                 CONCLUSION GENERALE
+	
+La réalisation de ce projet de gestion des réservations de véhicules dans un parc automobile représente une initiative stratégique visant à moderniser et optimiser la gestion opérationnelle. À travers une architecture basée sur le modèle MVC (Model-View-Controller), cette application se distingue par sa modularité, sa flexibilité et sa capacité à évoluer en fonction des besoins futurs. Ce projet répond à des objectifs clairs : centraliser les opérations en facilitant la gestion des clients, véhicules, réservations, contrats et factures au sein d’une plateforme unique ; automatiser les processus pour réduire les tâches manuelles grâce à une interface intuitive et des fonctionnalités adaptées, améliorer la traçabilité pour assurer un suivi précis des réservations et des données utilisateurs 
+Sur le plan technique, le choix d’une architecture MVC garantit une séparation claire entre les données, la logique métier et l’interface utilisateur. Cela permet une meilleure maintenance, un déploiement plus rapide, et une évolutivité accrue. Chaque module (Clients, Véhicules, Réservations, Contrats, Factures, Gestionnaires) a été conçu pour fonctionner de manière indépendante tout en s’intégrant harmonieusement à l’ensemble de l’application
+En somme, ce projet incarne une réponse moderne et adaptée aux défis rencontrés dans la gestion des réservations de véhicules. Il s’appuie sur une méthodologie rigoureuse, une vision stratégique et une équipe engagée pour livrer une solution fiable, performante et durable. Ce système est appelé à devenir un pilier essentiel pour améliorer les performances du parc automobile, en offrant une expérience utilisateur enrichie et une gestion plus efficace des ressources.
+
+
+
