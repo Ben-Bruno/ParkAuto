@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GestionReservationController">
+   <children>
+      <Label prefHeight="40.0" prefWidth="650.0" text="                                                                                   GESTION RESERVATIONS" />
+      <VBox layoutX="4.0" layoutY="52.0" prefHeight="650.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="690.0" AnchorPane.topAnchor="52.0">
+         <children>
+            <HBox prefHeight="60.0" prefWidth="150.0">
+               <children>
+                  <Label prefHeight="150.0" prefWidth="100.0" text="   IDENTIFIANT" />
+                  <TextField fx:id="idres" prefHeight="25.0" prefWidth="200.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="60.0" prefWidth="150.0">
+               <children>
+                  <Label prefHeight="150.0" prefWidth="100.0" text="   CLIENT" />
+                  <ComboBox fx:id="cl" prefHeight="25.0" prefWidth="200.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="60.0" prefWidth="150.0">
+               <children>
+                  <Label prefHeight="150.0" prefWidth="100.0" text="  VEHICULE" />
+                  <ComboBox fx:id="vh" prefHeight="25.0" prefWidth="200.0">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="120.0" prefHeight="25.0" prefWidth="196.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="116.0" text="DATE RESERVATION" />
+                  <DatePicker fx:id="dateReservation" prefHeight="25.0" prefWidth="196.0">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </DatePicker>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="60.0" prefWidth="324.0">
+               <children>
+                  <Label prefHeight="150.0" prefWidth="100.0" text="  DATE DEBUT" />
+                  <DatePicker fx:id="datedebut" prefHeight="25.0" prefWidth="203.0">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </DatePicker>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="90.0" prefHeight="25.0" prefWidth="196.0">
+               <children>
+                  <Label prefHeight="150.0" prefWidth="100.0" text="  DATE FIN" />
+                  <DatePicker fx:id="datefin" prefHeight="25.0" prefWidth="202.0">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </DatePicker>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+			<HBox layoutX="10.0" layoutY="170.0" prefHeight="25.0" prefWidth="196.0">
+			   <children>
+			      <Label prefHeight="150.0" prefWidth="100.0" text="HEURE DE DEBUT" />
+			      <TextField fx:id="debut" prefHeight="25.0" prefWidth="195.0" promptText="HH:mm">
+			         <HBox.margin>
+			            <Insets top="5.0" />
+			         </HBox.margin>
+			         <padding>
+			            <Insets bottom="20.0" />
+			         </padding>
+			      </TextField>
+			   </children>
+			   <VBox.margin>
+			      <Insets top="5.0" />
+			   </VBox.margin>
+			</HBox>
+			<HBox layoutX="10.0" layoutY="210.0" prefHeight="25.0" prefWidth="196.0">
+			   <children>
+			      <Label prefHeight="150.0" prefWidth="100.0" text="HEURE DE FIN" />
+			      <TextField fx:id="fin" prefHeight="25.0" prefWidth="195.0" promptText="HH:mm">
+			         <HBox.margin>
+			            <Insets top="5.0" />
+			         </HBox.margin>
+			         <padding>
+			            <Insets bottom="20.0" />
+			         </padding>
+			      </TextField>
+			   </children>
+			   <VBox.margin>
+			      <Insets top="5.0" />
+			   </VBox.margin>
+			</HBox>
+
+
+            <HBox layoutX="10.0" layoutY="410.0" prefHeight="25.0" prefWidth="196.0">
+               <children>
+                  <Label prefHeight="150.0" prefWidth="100.0" text="MOTIF">
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="motif" prefHeight="25.0" prefWidth="200.0">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="196.0">
+               <children>
+                  <Label prefHeight="150.0" prefWidth="100.0" text="COUT" />
+                  <TextField fx:id="cout" prefHeight="25.0" prefWidth="200.0">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+           <HBox layoutX="10.0" layoutY="270.0" prefHeight="25.0" prefWidth="196.0">
+		   <children>
+		      <Label prefHeight="150.0" prefWidth="100.0" text="  AVANCÉ" />
+		      <TextField fx:id="avance" prefHeight="25.0" prefWidth="195.0">
+		         <HBox.margin>
+		            <Insets top="5.0" />
+		         </HBox.margin>
+		      </TextField>
+		   </children>
+		   <VBox.margin>
+		      <Insets top="5.0" />
+		   </VBox.margin>
+		</HBox>
+		<HBox layoutX="10.0" layoutY="310.0" prefHeight="25.0" prefWidth="196.0">
+		   <children>
+		      <Label prefHeight="150.0" prefWidth="100.0" text="  RESTE" />
+		      <TextField fx:id="reste" prefHeight="25.0" prefWidth="195.0">
+		         <HBox.margin>
+		            <Insets top="5.0" />
+		         </HBox.margin>
+		      </TextField>
+		   </children>
+		   <VBox.margin>
+		      <Insets top="5.0" />
+		   </VBox.margin>
+		</HBox>
+
+            <HBox prefHeight="60.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="ajouterRes" onAction="#ajouterRes" text="AJOUTER">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="100.0" top="30.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="70.0" prefWidth="300.0">
+               <children>
+                  <Button fx:id="modifierRes" onAction="#modifierRes" text="MODIFIER">
+                     <HBox.margin>
+                        <Insets left="40.0" top="30.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="supprimerRes" onAction="#supprimerRes" text="ANNULER">
+                     <HBox.margin>
+                        <Insets left="50.0" top="30.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <Button fx:id="rechercherResBtn" layoutX="365.0" layoutY="41.0" onAction="#rechercherRes" text="RECHERCHER" />
+      <TextField fx:id="rechercherRes" layoutX="495.0" layoutY="29.0" prefHeight="25.0" prefWidth="185.0" />
+      <VBox layoutX="304.0" prefHeight="490.0" prefWidth="501.0" AnchorPane.bottomAnchor="-20.0" AnchorPane.leftAnchor="304.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <TableView fx:id="tabReservation" editable="true" prefHeight="200.0" prefWidth="732.0" tableMenuButtonVisible="true">
+               <columns>
+                  <TableColumn fx:id="TidRes" prefWidth="50.0" text="IDENTIFIANT" />
+                  <TableColumn fx:id="TdateDebut" prefWidth="60.0" text="DATE DEBUT" />
+                  <TableColumn fx:id="TdatefinRes" prefWidth="60.0" text="DATE FIN" />
+                  <TableColumn fx:id="TcoutRes" prefWidth="60.0" text="COUT" />
+			       <TableColumn fx:id="Tavance" prefWidth="60.0" text="AVANCÉ" />
+					<TableColumn fx:id="Treste" prefWidth="60.0" text="RESTE" />
+			        <TableColumn fx:id="Tcl" prefWidth="50.0" text="CLIENT" />
+			        <TableColumn fx:id="Tvh" prefWidth="60.0" text="VEHICULE" />
+			        <TableColumn fx:id="TheureDebut" prefWidth="60.0" text="DEBUT" />
+			        <TableColumn fx:id="TheureFin" prefWidth="60.0" text="FIN" />
+			        <TableColumn fx:id="Tmotif" prefWidth="60.0" text="MOTIF" />
+                  <TableColumn fx:id="TDateReservation" prefWidth="100.0" text="DATE RESERVATION" />
+               </columns>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

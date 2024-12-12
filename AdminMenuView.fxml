@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminMenuController">
+   <children>
+      <VBox prefHeight="500.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="guide" onAction="#guide" text="GUIDE D'UTILISATION">
+               <VBox.margin>
+                  <Insets left="15.0" top="250.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button fx:id="retour" onAction="#retour" prefHeight="17.0" prefWidth="137.0" text="RETOUR">
+               <VBox.margin>
+                  <Insets left="15.0" top="150.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="deconnect" onAction="#seDeconnecter" prefHeight="17.0" prefWidth="137.0" text="SE DECONNECTER">
+               <VBox.margin>
+                  <Insets left="15.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox prefHeight="500.0" prefWidth="326.0" AnchorPane.leftAnchor="220.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets top="60.0" />
+               </VBox.margin>
+               <children>
+                  <Button fx:id="client" onAction="#client" prefHeight="100.0" prefWidth="150.0" text="CLIENTS">
+                     <HBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="vehicule" onAction="#vehicule" prefHeight="100.0" prefWidth="150.0" text="VEHICULES">
+                     <HBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="70.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="gestionnaire" onAction="#gestionnaire" prefHeight="100.0" prefWidth="150.0" text="GESTIONNAIRES">
+                     <HBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="reservation" onAction="#reservation" prefHeight="100.0" prefWidth="150.0" text="RESERVATIONS">
+                     <HBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="170.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="stats" onAction="#stats" prefHeight="100.0" prefWidth="200.0" text="STATISTIQUES">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="50.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
